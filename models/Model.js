@@ -19,23 +19,12 @@ import lib from 'Lernreflex/lib';
 
 class Model {
   constructor(className, caching = true){
-    this.protocol = 'http://';
     if(Platform.OS === 'ios') {
       this.ip = ip.ip ? ip.ip : 'localhost'
     } else {
       this.ip = ip.ip ? ip.ip : 'localhost';
     }
-    if(this.ip.indexOf('fleckenroller') > -1) {
-      this.host = this.protocol + this.ip + '/';
-    } else if(this.ip.indexOf('erdmaennchen') > -1) {
-      this.protocol = 'https://';
-      this.host = this.protocol + this.ip + '/';
-    } else
-    if(this.ip.indexOf('competence-base') > -1) {
-      this.host = this.protocol + this.ip + '/';
-    } else {
-      this.host = this.protocol + this.ip+':8084/';
-    }
+    this.host = ip.ip;
     this.api1 = this.host+'api1/';
     this.api0 = this.host+'competences/';
     this.api = this.api1;

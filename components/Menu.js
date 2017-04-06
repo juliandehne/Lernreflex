@@ -10,13 +10,23 @@ import {
   NavigatorIOS,
   Platform
 } from 'react-native';
-import {styles, Router, User, Admin, CompetenceList, Loader} from 'Lernreflex/imports';
+import {styles, Router, User, Admin, Dummy, CompetenceList, Loader} from 'Lernreflex/imports';
 
 /**
  * Represents the view for the menu.
  * @extends React.Component
  * @constructor
  */
+
+
+class Greeting extends Component {
+     render() {
+       return (
+         <Text>Hello Vodka!</Text>
+       );
+     }
+ }
+
 
 class Menu extends Component{
 
@@ -49,7 +59,6 @@ class Menu extends Component{
         links: ds.cloneWithRows(_this.links),
       });
     });
-
   }
 
   /**
@@ -87,16 +96,22 @@ class Menu extends Component{
   * @return {ReactNative.View}
   */
   render(){
-    return <View style={styles.wrapper}>
+    return (
+     <View style={styles.wrapper}>
       <ListView
         style={styles._.list}
         dataSource={this.state.links}
         contentContainerStyle={{flex:1}}
         renderRow={this.renderRow}>
       </ListView>
-    </View>
+      <Greeting/>
+      <Dummy/>
+     </View>
+   );
   }
 }
+
+
 
 
 

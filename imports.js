@@ -28,6 +28,7 @@ export {default as Icon} from 'react-native-vector-icons/Ionicons';
 export {default as ListEntryCompetence} from 'Lernreflex/components/ListEntryCompetence';
 export {default as Admin} from 'Lernreflex/components/Admin';
 export {default as UserList} from 'Lernreflex/components/UserList';
+export {default as Dummy} from 'Lernreflex/components/Dummy';
 
 /* Tests */
 export {default as Test} from 'Lernreflex/tests/Test';
