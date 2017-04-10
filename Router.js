@@ -18,6 +18,7 @@ var Router = {
     person:'ios-person',
     addRound:'ios-add-circle',
     comments:'ios-chatboxes',
+    inquiry:'ios-beer'
   },
 
   /**
@@ -31,6 +32,10 @@ var Router = {
       route.passProps = {};
     }
     switch (route.id) {
+      case 'inquiry':
+             route.passProps = {...route.passProps, type:'inquiry'};
+             route.title = 'Forschungsfragen';
+      break;
       case 'goals':
       route.passProps = {...route.passProps, type:'goals'};
       route.title = 'Lernziele';

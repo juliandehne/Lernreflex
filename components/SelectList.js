@@ -73,7 +73,7 @@ class SelectList extends Component{
       if(!el.value) el.value = '';
       return el.id.search(regex) >= 0 || el.value.search(regex) >= 0;
     });
-    this.setState({filter:filter, dataSource:this.state.dataSource.cloneWithRows(filteredElements)});
+    this.setState({filter:filter, dataSource:this.statAppRegistrye.dataSource.cloneWithRows(filteredElements)});
   }
 
   /**
