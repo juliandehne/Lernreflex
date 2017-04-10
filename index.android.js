@@ -27,7 +27,7 @@ import Menu from 'Lernreflex/components/Menu';
 import CompetenceView from 'Lernreflex/components/CompetenceView';
 import BadgeList from 'Lernreflex/components/BadgeList';
 import Inquiry from 'Lernreflex/components/Inquiry';
-import {styles, Router, User, UserLogin, Icon, CompetenceCreate, UserList, CompetenceList} from 'Lernreflex/imports';
+import {styles, Router, User, UserLogin, Icon, CompetenceCreate, InquiryCreate, UserList, CompetenceList} from 'Lernreflex/imports';
 
 
 var _navigator; // we fill this up upon on first navigation.
@@ -114,7 +114,14 @@ class Lernreflex extends Component {
           <Icon name="md-add" size={iconSize} color='#FFF' />
           </TouchableHighlight>
         );
-        if(route.id == 'goal' || route.id == 'competence' || route.id == 'activity' || route.id == 'inquiry')
+        if (route.id == 'inquiry') {
+          return  (
+            <TouchableHighlight underlayColor={styles._.primary} style={styles._.toolbarRight} onPress={() => {Router.route({id:'inquiry.add', component:InquiryCreate}, navigator)}} >
+            <Icon name="md-add" size={iconSize} color='#FFF' />
+            </TouchableHighlight>
+          );
+        }
+        if(route.id == 'goal' || route.id == 'competence' || route.id == 'activity' )
         return (
           <TouchableHighlight underlayColor={styles._.primary} style={styles._.toolbarRight}
           onPress={route.onRightButtonPress}>

@@ -64,6 +64,10 @@ var Router = {
       route.title = 'Kompetenz hinzufügen';
       route.passProps = {...route.passProps, type: 'competences', inputTitle:'Kompetenz eingeben'};
       break;
+      case 'inquiry.add':
+      route.title = 'Forschungsfrage hinzufügen';
+      route.passProps = {...route.passProps, type: 'inquiry', inputTitle:'Forschungsfrage eingeben'};
+      break;
       case 'user.login':
       if(!route.title) route.title = 'Einloggen';
       break;

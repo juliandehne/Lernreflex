@@ -29,6 +29,7 @@ export {default as ListEntryCompetence} from 'Lernreflex/components/ListEntryCom
 export {default as Admin} from 'Lernreflex/components/Admin';
 export {default as UserList} from 'Lernreflex/components/UserList';
 export {default as Inquiry} from 'Lernreflex/components/Inquiry';
+export {default as InquiryCreate} from 'Lernreflex/components/InquiryCreate';
 
 /* Tests */
 export {default as Test} from 'Lernreflex/tests/Test';
