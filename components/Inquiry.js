@@ -11,12 +11,15 @@ import {
 } from 'react-native';
 import {styles, Router, User, Admin, CompetenceList, Loader} from 'Lernreflex/imports';
 
-class Dummy extends Component {
+class Inquiry extends Component {
   render() {
     return (
+      <View>
         <Text>Hello Dummy2!</Text>
+        <Text>Hello Dummy3!</Text>
+      </View>
     );
   }
 }
 
-module.exports = Dummy;
+module.exports = Inquiry;
