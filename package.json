@@ -13,7 +13,8 @@
     "react-native-circular-progress": "0.0.7",
     "react-native-keyboard-spacer": "^0.3.0",
     "react-native-tab-navigator": "^0.3.3",
-    "react-native-vector-icons": "^2.0.3"
+    "react-native-vector-icons": "^2.0.3",
+    "react-native-button" : "^1.8.2"
   },
   "devDependencies": {
     "eslint": "^2.8.0",
