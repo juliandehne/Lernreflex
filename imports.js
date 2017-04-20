@@ -14,6 +14,7 @@ export {default as LearningTemplate} from 'Lernreflex/models/LearningTemplate';
 export {default as Course} from 'Lernreflex/models/Course';
 export {default as Badge} from 'Lernreflex/models/Badge';
 export {default as Activity} from 'Lernreflex/models/Activity';
+export {default as InquiryDAO} from 'Lernreflex/models/InquiryDAO';
 
 /* Components */
 export {default as SuperComponent} from 'Lernreflex/components/SuperComponent';
@@ -30,6 +31,8 @@ export {default as Admin} from 'Lernreflex/components/Admin';
 export {default as UserList} from 'Lernreflex/components/UserList';
 export {default as Inquiry} from 'Lernreflex/components/Inquiry';
 export {default as InquiryCreate} from 'Lernreflex/components/InquiryCreate';
+
+
 
 /* Tests */
 export {default as Test} from 'Lernreflex/tests/Test';

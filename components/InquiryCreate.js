@@ -25,7 +25,8 @@ import {
   SelectList,
   User,
   Loader,
-  InputScrollView
+  InputScrollView,
+  InquiryDAO
 } from 'Lernreflex/imports';
 
 class Inquiry extends Component {
@@ -34,7 +35,7 @@ class Inquiry extends Component {
     super();
     this.state = {
       text:'',
-      catchwords:[],
+      catchwords:["Forschungsfrage"],
       group:'',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,9 +43,16 @@ class Inquiry extends Component {
 
   handleSubmit(event) {
     //alert('A name was submitted: ' + this.state.text);
-
+    let inquiryDAO = new InquiryDAO();
     // send question to server
-
+    inquiryDAO.save({
+      operator: "unbestimmt",
+      catchwords: this.state.catchwords,
+      subCompetences: [],
+      superCompetences: [],
+      learningProjectName: "Forschungsfragen",
+      research: true
+    }, this.state.text);
     // route to inquiry
   }
 

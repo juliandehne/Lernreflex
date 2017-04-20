@@ -31,7 +31,8 @@ class Competence extends Model{
       catchwords:['*'],
       subCompetences: ['*'],
       superCompetences: ['*'],
-      learningProjectName: '*'
+      learningProjectName: '*',
+      research: false
     };
     this.setApi(1);
   }
