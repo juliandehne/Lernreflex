@@ -25,7 +25,7 @@ class InquiryDAO extends Model {
         return user.isLoggedIn().then((u) => {
             learningTemplate.save({
                 userName: u.username,
-                groupId: "university",
+                groupId: "userinquiry",
                 selectedTemplate: "Forschungsfragen"
             }).then(() => this.put('competences/' + (id), obj))
                 .then(() => this.post("users/" + u.username + "/interests/competences/" + id));

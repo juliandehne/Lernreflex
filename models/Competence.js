@@ -12,7 +12,7 @@ import {LearningTemplate, Course, Activity, User, lib} from 'Lernreflex/imports'
 
 class Competence extends Model{
 
-  constructor(caching = true){
+  constructor(caching = true, inquiry = false){
     super('Competence', caching);
     this.urls = {
       competences: ''
@@ -32,8 +32,10 @@ class Competence extends Model{
       subCompetences: ['*'],
       superCompetences: ['*'],
       learningProjectName: '*',
-      research: false
+      research: inquiry
     };
+    this.getOverview.bind(this);
+
     this.setApi(1);
   }
 
@@ -70,7 +72,7 @@ class Competence extends Model{
   getOverview(type = 'competences'){ //faster to get learnigntemplates and courses and competences
     let user = new User();
     return user.isLoggedIn().then((u) => {
-      return this.get('users/'+u.username+'/overview');
+      return this.get('users/'+u.username+'/overview?isResearch='+this.definition.research);
     });
   }
 
